@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace Session_Demo
 {
-    internal static class Helper
+    internal static class Helper<T>
     {
+        public static int LinearSearch(T[] arr, T value)
+        {
+            if (arr?.Length > 0 && value is not null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (value.Equals(arr[i]))
+                        return i;
+                }
+            }
+            return -1;
+        }
         public static void SWAP(ref int x, ref int y)
         {
         Console.WriteLine("After Swaping: ");
@@ -29,12 +41,6 @@ namespace Session_Demo
         x = y;
         y = temp;
         }
-        public static void SWAP<T>(ref T x, ref T y)
-        {
-            Console.WriteLine("After Swaping:-");
-            T temp = x;
-            x = y;
-            y = temp;
-        }
+        
     }
 }

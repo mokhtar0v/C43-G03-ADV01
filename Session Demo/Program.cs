@@ -28,6 +28,17 @@
             Console.WriteLine($"Point 01 = {p01}");
             Console.WriteLine($"Point 02 = {p02}");
             #endregion
+
+            #region Generic Ex02
+            int[] nums = { 10, 2, 8, 4, 9, 1, 5, 3, 7, 6 };
+            int res = Helper<int>.LinearSearch(nums, 7);
+            Console.WriteLine($"The number is in index: {res}");
+            Employee emp01 = new Employee() { Id = 10, Name = "Ahmed", Salary = 5000 };
+            Employee emp02 = new Employee() { Id = 20, Name = "Ahmed", Salary = 3000 };
+            if (emp01.Equals(emp02)) Console.WriteLine("Equals");
+            //if (emp01 == emp02) Console.WriteLine("Equals");
+            else Console.WriteLine("Not Equals");
+            #endregion
         }
     }
 }
