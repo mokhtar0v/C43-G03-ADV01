@@ -22,24 +22,24 @@ namespace Session_Demo
         }
         public static void SWAP(ref int x, ref int y)
         {
-        Console.WriteLine("After Swaping: ");
-        int temp = x;
-        x = y;
-        y = temp;
+            Console.WriteLine("After Swaping: ");
+            int temp = x;
+            x = y;
+            y = temp;
         }
         public static void SWAP(ref double x, ref double y)
         {
-        Console.WriteLine("After Swaping: ");
-        double temp = x;
-        x = y;
-        y = temp;
+            Console.WriteLine("After Swaping: ");
+            double temp = x;
+            x = y;
+            y = temp;
         }
         public static void SWAP(ref Point x, ref Point y)
         {
-        Console.WriteLine("After Swaping: ");
-        Point temp = x;
-        x = y;
-        y = temp;
+            Console.WriteLine("After Swaping: ");
+            Point temp = x;
+            x = y;
+            y = temp;
         }
         
     }
