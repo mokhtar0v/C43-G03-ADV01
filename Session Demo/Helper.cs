@@ -54,5 +54,19 @@ namespace Session_Demo
             }
             return -1;
         }
+        public static int LinearSearch(T[] arr, T value, Func<T, T, bool> equals)
+        {
+            if (arr?.Length > 0 && value is not null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    //if (value.Equals(arr[i]))
+                    //if (eq.Equals(value, arr[i]))
+                    if (equals(value, arr[i]))
+                        return i;
+                }
+            }
+            return -1;
+        }
     }
 }

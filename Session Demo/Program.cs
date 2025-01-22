@@ -41,8 +41,8 @@
             #endregion
 
             #region Equality and GetHashCode
-            //Employee emp01 = new Employee(10, "Samer", 5000);
-            //Employee emp02 = new Employee(10, "Samer", 5000);
+            //Employee emp01 = new Employee(10, "Ali", 5000);
+            //Employee emp02 = new Employee(10, "Ali", 5000);
             //Console.WriteLine($"Emp01.GetHashCode(): {emp01.GetHashCode()}");
             //Console.WriteLine($"Emp02.GetHashCode(): {emp02.GetHashCode()}");
             ///if (emp01 == emp02)  //Compare ref based on equality
@@ -71,21 +71,34 @@
             //    new Employee() {Id = 13, Name = "HH", Salary = 100}
             //};
             //
-            //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Id = 7, Name = "Samer", Salary = 12000 });
+            //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Id = 7, Name = "Ali", Salary = 12000 });
             //Console.WriteLine($"Employee in index: {indax}");
             #endregion
 
             #region IEqualityComparer
-            Employee[] emps =
-            {
-                new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
-                new Employee() {Id = 20, Name = "Ali", Salary = 2000},
-                new Employee() {Id = 7, Name = "Omar", Salary = 12000},
-                new Employee() {Id = 13, Name = "HH", Salary = 100}
-            };
+            //Employee[] emps =
+            //{
+            //    new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
+            //    new Employee() {Id = 20, Name = "Ali", Salary = 2000},
+            //    new Employee() {Id = 7, Name = "Omar", Salary = 12000},
+            //    new Employee() {Id = 13, Name = "HH", Salary = 100}
+            //};
 
-            int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Name = "Samer" }, new EmpEqComName());
-            Console.WriteLine($"Employee in index: {indax}");
+            //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Name = "Ali" }, new EmpEqComName());
+            //Console.WriteLine($"Employee in index: {indax}");
+            #endregion
+
+            #region Delegate
+            //Employee[] emps =
+            //{
+            //    new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
+            //    new Employee() {Id = 20, Name = "Ali", Salary = 2000},
+            //    new Employee() {Id = 7, Name = "Omar", Salary = 12000},
+            //    new Employee() {Id = 13, Name = "HHH", Salary = 100}
+            //};
+
+            //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Name = "Omar" }, delegate (Employee X, Employee Y) { return X.Name == Y.Name; });
+            //Console.WriteLine($"Employee in index: {indax}");
             #endregion
         }
     }
