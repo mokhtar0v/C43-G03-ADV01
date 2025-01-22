@@ -28,6 +28,19 @@
                     break;
             }
         }
+        public static void ReverseInPlace(ArrayList list)
+        {
+            int left = 0, right = list.Count - 1;
+            while (left < right)
+            {
+                object temp = list[left];
+                list[left] = list[right];
+                list[right] = temp;
+
+                left++;
+                right--;
+            }
+        }
         static void Main(string[] args)
         {
             #region Qeustion01
@@ -49,13 +62,29 @@
             #endregion
 
             #region Question02
-            doubleRange<int> intRange = new Range<int>(10, 50);
-            Console.WriteLine(intRange.IsInRange(30)); 
-            Console.WriteLine(intRange.Length()); 
+            //Range <int> intRange = new Range<int>(10, 50);
+            //Console.WriteLine(intRange.IsInRange(30)); 
+            //Console.WriteLine(intRange.Length()); 
 
-            Range <double> doubleRange = new Range<double>(5.5, 10.2);
-            Console.WriteLine(doubleRange.IsInRange(7.8));
-            Console.WriteLine(doubleRange.Length()); 
+            //Range <double> doubleRange = new Range<double>(5.5, 10.2);
+            //Console.WriteLine(doubleRange.IsInRange(7.8));
+            //Console.WriteLine(doubleRange.Length());
+            #endregion
+
+            #region Question03
+            ArrayList list = new ArrayList { 1, 2, 3, 4, 5 };
+            for (int i = 0; i < list.length; ++i)
+            {
+                Console.Writeline(list[i]);
+            }
+
+            ReverseInPlace(arrayList);
+
+            Console.WriteLine("Reversed ArrayList:");
+            for (int i = 0; i < list.length; ++i)
+            {
+                Console.WriteLine(list[i]);
+            }
             #endregion
         }
     }
