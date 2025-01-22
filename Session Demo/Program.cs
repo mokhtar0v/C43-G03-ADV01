@@ -61,6 +61,19 @@
             ///    Console.WriteLine(e);
 
             #endregion
+
+            #region Is and As Operators
+            //Employee[] emps =
+            //{
+            //    new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
+            //    new Employee() {Id = 20, Name = "Mohamed", Salary = 2000},
+            //    new Employee() {Id = 7, Name = "Samer", Salary = 12000},
+            //    new Employee() {Id = 13, Name = "Messi", Salary = 100}
+            //};
+            //
+            //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Id = 7, Name = "Samer", Salary = 12000 });
+            //Console.WriteLine($"Employee in index: {indax}");
+            #endregion
         }
     }
 }
