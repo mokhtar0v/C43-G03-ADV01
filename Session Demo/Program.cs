@@ -66,13 +66,26 @@
             //Employee[] emps =
             //{
             //    new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
-            //    new Employee() {Id = 20, Name = "Mohamed", Salary = 2000},
-            //    new Employee() {Id = 7, Name = "Samer", Salary = 12000},
-            //    new Employee() {Id = 13, Name = "Messi", Salary = 100}
+            //    new Employee() {Id = 20, Name = "Ali", Salary = 2000},
+            //    new Employee() {Id = 7, Name = "Omar", Salary = 12000},
+            //    new Employee() {Id = 13, Name = "HH", Salary = 100}
             //};
             //
             //int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Id = 7, Name = "Samer", Salary = 12000 });
             //Console.WriteLine($"Employee in index: {indax}");
+            #endregion
+
+            #region IEqualityComparer
+            Employee[] emps =
+            {
+                new Employee() {Id = 10, Name = "Ahmed", Salary = 9000},
+                new Employee() {Id = 20, Name = "Ali", Salary = 2000},
+                new Employee() {Id = 7, Name = "Omar", Salary = 12000},
+                new Employee() {Id = 13, Name = "HH", Salary = 100}
+            };
+
+            int indax = Helper<Employee>.LinearSearch(emps, new Employee() { Name = "Samer" }, new EmpEqComName());
+            Console.WriteLine($"Employee in index: {indax}");
             #endregion
         }
     }
